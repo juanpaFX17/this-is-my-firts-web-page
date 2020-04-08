@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spacex</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://kit.fontawesome.com/49178ea0a4.js"></script>
+</head>
+
+<body class="hidden">
+    <!--se crea una clase al body la cual permitira modificar de la misma manera los elementos html que tengan el mismo nombre de clase ya sea desde css o js-->
+
+    <!--se crea una caja div que se usa para almacenar una parte o division de html para poder ser trabajada despues con js, a la cual se le crea una clase con la cual los elementos con el mismo nombre de clase pueden cambiar su estilo de la misma manera osea varias elemtos pueden tener el mismo nombre de clase ademas se crea un id el cual si es unico para un elemento html y tiene las mismas funciones de una clase-->
+    <!--clase del preloader de pure css loader-->
+    <!--
+    <div class="centrado" id="onload"></div>                                  
+            <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>    
+      </div>
+    -->
+
+    <header>
+        <!--encabezado-->
+        <nav id="nav" class="nav1">
+            <!--nav se usa para especificar un conjunto de links de navegacion-->
+            <div class="contenedor-nav">
+                <!--se crea una caja div para almacenar elemtos html-->
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <!--se crea caja con una clase logo para los elementos del logo-->
+                <div class="enlaces" id="enlaces">
+                    <!--se crea otra caja con la clase enlaces y el id enlaces y se ponen lon links-->
+                    <a href="#" id="enlace-falcon9" class="btn-header">FALCON 9</a>    <!--el 'a' define un hipervinculo que es usando para linkear a otro pagina-->
+                    <a href="#" id="enlace-falconheavy" class="btn-header">FALCON HEAVY</a>
+                    <a href="#" id="enlace-dragon" class="btn-header">DRAGON</a>
+                    <a href="#" id="enlace-starship" class="btn-header">STARSHIP</a>
+                </div>
+                <div class="icono" id="open">
+                    <!--caja para elementos de boton de opcioness-->
+                    <span>&#9776;</span>
+                    <!--span se usa para agrupar elementos en linea en un documento, ademas proporciona una forma de agregar un enlace a una parte de un texto o una parte de un documento y en este caso se usa para agregar un boton de opcioes a traves de un codigo de forma sencilla-->
+                </div>
+            </div>
+        </nav>
+        <div class="textos">   <!--caja contenedora con clase textos para despues cambiar su formato con css con este nombre-->
+            <h1>Spacex</h1>
+            <h2>SPACE EXPLORATION TECHNOLOGIES CORP.</h2>
+        </div>
+    </header>
+
+    <main>                <!--el main contiene la informacion pricipal de un documento-->
+        <section class="team contenedor" id="equipo">        <!--define una seccion de un documento tales como un capitulo, encabezado etc en este caso guarda toda la informacion de gente por conocer-->       
+            <h3>SPACEX DESIGNS, MANUFACTURES AND LAUNCHES ADVANCED ROCKETS AND SPACECRAFT</h3>
+            <p class="after">conoce a la gente asombrosa y creativa</p>
+            <div class="card">   <!--cremos caja que contiene todas las tarjetas de presentacion de los integrantes de la pagina -->
+                <div class="content-card"> <!--caja que contiene la informacion de una tarjeta-->
+                    <div class="people">    <!--caja que contiene la imagen de la persona-->
+                        <img src="img/people1.jpg" alt="">
+                    </div>
+                    <div class="texto-team">   <!--caja que contiene la informacion de la persona-->
+                        <h4>O</h4>
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="people">
+                        <img src="img/people2.jpg" alt="">
+                    </div>
+                    <div class="texto-team">
+                        <h4>R</h4>
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="people">
+                        <img src="img/people3.jpg" alt="">
+                    </div>
+                    <div class="texto-team">
+                        <h4>C</h4>
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="servicio">           <!--seccion donde encontramos la informacion sobre la pagina y no la ponemos en un contenedor porque va a tener una imagen que abarca el 100% de la pagina-->
+            <div class="contenedor">                    <!--caja que contien toda la info de los servicios-->
+                <h3>Nuestros servicios</h3>
+                <p class="after">Siempre mejorando para ti</p>
+                <div class="servicios">                 <!--caja que contiene los servicios-->
+                    <div class="caja-servicios">        <!--caja que contiene un servicio con su info-->
+                        <img src="img/heart.png" alt="">
+                        <h4>Creativos y asombrosos</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                    <div class="caja-servicios">
+                        <img src="img/responsive.png" alt="">
+                        <h4>Creativos y asombrosos</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                    <div class="caja-servicios">
+                        <img src="img/efectos.png" alt="">
+                        <h4>Creativos y asombrosos</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="work contenedor" id="trabajo">      <!--seccio que contiene los trabajos que se relizan y toda su info-->
+            <h3>Nuestro trabajo</h3>
+            <p class="after">Hacemos de algo simple algo extraordinario</pclass>
+            </p>
+            <div class="botones-work">                      <!--caja que contiene los botones para interactuar con los trabajos-->
+                <ul>                                        <!--ul es una lista desordenada con los botones-->
+                    <li class="filter active" data-nombre='todos'>Todos</li> <!--li es un elemento de la lista con corchete y un atributo data-nombre que permitira su modificacion con css o js-->
+                    <li class="filter" data-nombre='diseño'>Diseño</li>
+                    <li class="filter" data-nombre='programacion'>Programacion</li>
+                    <li class="filter" data-nombre='marketing'>Marketing</li>
+                </ul>
+            </div>
+            <div class="galeria-work">            <!--caja con las imagenes e informacion de los trabajos-->
+                <div class="cont-work programacion">    <!--contenido de un trabajo de programacion-->
+                    <div class="img-work">
+                        <img src="img/descarga (1).jpg" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Programacion</h4>
+                    </div>
+                </div>
+                <div class="cont-work programacion">
+                    <div class="img-work">
+                        <img src="img/descarga (2).jpg" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Programacion</h4>
+                    </div>
+                </div>
+                <div class="cont-work programacion">
+                    <div class="img-work">
+                        <img src="img/descarga.jpg" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Programacion</h4>
+                    </div>
+                </div>
+                <div class="cont-work diseño">
+                    <div class="img-work">
+                        <img src="img/001-facebook.png" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Diseño</h4>
+                    </div>
+                </div>
+                <div class="cont-work diseño">
+                    <div class="img-work">
+                        <img src="img/001-facebook.png" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Diseño</h4>
+                    </div>
+                </div>
+                <div class="cont-work diseño">
+                    <div class="img-work">
+                        <img src="img/001-facebook.png" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Diseño</h4>
+                    </div>
+                </div>
+                <div class="cont-work marketing">
+                    <div class="img-work">
+                        <img src="img/002-instagram.png" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Marketing</h4>
+                    </div>
+                </div>
+                <div class="cont-work marketing">
+                    <div class="img-work">
+                        <img src="img/002-instagram.png" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Marketing</h4>
+                    </div>
+                </div>
+                <div class="cont-work marketing">
+                    <div class="img-work">
+                        <img src="img/002-instagram.png" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Marketing</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto"> <!--pie de pagina con imagenes-->
+        <div class="footer contenedor">
+            <div class="marca-logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="iconos">
+                <!--imagenes traidas de fontawesome por eso se usa i-->
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+            <p>La pasion e innovacion es lo que nos distingue del resto</p>
+        </div>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
