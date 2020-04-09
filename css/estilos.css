@@ -362,6 +362,26 @@ img{
     margin-top: var(--espacios); /*espacio entre los p y los iconos de arriba*/
   }
 
+  @media screen and (max-width: 700px){ /*esto se hace para hacer responsive y que sirva en celulares el cambio de nav1 a nav2 haciendo que las letras en vav 2 sigan en blanco cuando el maximo ancho sea de 700px*/
+    .nav2{
+      color: #fff; /*color del texto*/
+    }
+
+    .icono{
+      display: block;  /*muestra el elemento como un bloque en este caso mostramos el icono de navegacion tipico de celulares*/
+    }
+
+    .enlaces{
+      position: fixed; /*ya no se alinea con el flex en este caso flixed lo que hace esque el elemento se posicione relativo al punto de vista de la pagina y hace que siempre este en el mismo sitio sin importar que se haga scroll */
+      top: 80px;   /*distancia hacia abajo desde donde empieza en este caso nav 1 tiene una altura de 80px por eso lo ponemos que empiece desde ahi porque ahi acaba nav1*/
+      background: #2c3e50; /*le pone color al fondo de los textos*/
+      left: 0;           /*lo ponemos todo a la izquierda*/
+      height: 100%;     /*hacemos que ocupe toda la pantalla*/
+      transition: 1s;
+      
+    }
+  }
+
 
 
 
