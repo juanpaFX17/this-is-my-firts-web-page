@@ -10,16 +10,15 @@
     <script src="https://kit.fontawesome.com/49178ea0a4.js"></script>
 </head>
 
-<body class="hidden">
+<body id="body" class="hidden">
     <!--se crea una clase al body la cual permitira modificar de la misma manera los elementos html que tengan el mismo nombre de clase ya sea desde css o js-->
 
     <!--se crea una caja div que se usa para almacenar una parte o division de html para poder ser trabajada despues con js, a la cual se le crea una clase con la cual los elementos con el mismo nombre de clase pueden cambiar su estilo de la misma manera osea varias elemtos pueden tener el mismo nombre de clase ademas se crea un id el cual si es unico para un elemento html y tiene las mismas funciones de una clase-->
     <!--clase del preloader de pure css loader-->
-    <!--
-    <div class="centrado" id="onload"></div>                                  
+    
+    <div class="centrado" id="onload">                              
             <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>    
-      </div>
-    -->
+    </div>
 
     <header>
         <!--encabezado-->
@@ -33,6 +32,7 @@
                 <!--se crea caja con una clase logo para los elementos del logo-->
                 <div class="enlaces" id="enlaces">
                     <!--se crea otra caja con la clase enlaces y el id enlaces y se ponen lon links-->
+                    <a href="#" id="enlace-inicio" class="btn-header">INICIO</a>
                     <a href="#" id="enlace-falcon9" class="btn-header">FALCON 9</a>    <!--el 'a' define un hipervinculo que es usando para linkear a otro pagina-->
                     <a href="#" id="enlace-falconheavy" class="btn-header">FALCON HEAVY</a>
                     <a href="#" id="enlace-dragon" class="btn-header">DRAGON</a>
@@ -53,8 +53,8 @@
 
     <main>                <!--el main contiene la informacion pricipal de un documento-->
         <section class="team contenedor" id="equipo">        <!--define una seccion de un documento tales como un capitulo, encabezado etc en este caso guarda toda la informacion de gente por conocer-->       
-            <h3>SPACEX DESIGNS, MANUFACTURES AND LAUNCHES ADVANCED ROCKETS AND SPACECRAFT</h3>
-            <p class="after">conoce a la gente asombrosa y creativa</p>
+            <h3>Nuestro equipo</h3>
+            <p class="after">Conoce a la gente asombrosa y creativa</p>
             <div class="card">   <!--cremos caja que contiene todas las tarjetas de presentacion de los integrantes de la pagina -->
                 <div class="content-card"> <!--caja que contiene la informacion de una tarjeta-->
                     <div class="people">    <!--caja que contiene la imagen de la persona-->
@@ -86,7 +86,7 @@
             </div>
         </section>
 
-        <section class="about" id="servicio">           <!--seccion donde encontramos la informacion sobre la pagina y no la ponemos en un contenedor porque va a tener una imagen que abarca el 100% de la pagina-->
+        <section class="about" id="servicios">           <!--seccion donde encontramos la informacion sobre la pagina y no la ponemos en un contenedor porque va a tener una imagen que abarca el 100% de la pagina-->
             <div class="contenedor">                    <!--caja que contien toda la info de los servicios-->
                 <h3>Nuestros servicios</h3>
                 <p class="after">Siempre mejorando para ti</p>
@@ -216,6 +216,7 @@
     
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/filtro.js"></script>
 </body>
 
 </html>

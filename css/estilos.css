@@ -31,6 +31,23 @@ img{
 
 
 /*Prelaoder */
+
+
+.hidden{  /*llamamos a la clase del body*/
+  overflow: hidden;  /*hacemos que el usuario no pueda hacer scrool mientras esta el preloader*/
+}
+
+.centrado{
+  position: fixed;  /*hacemos que el preloader se superponga y no afecte la pagina osea se ponga encima de esta*/
+  width: 100vw;   
+  height: 100vh;
+  background: #000;
+  z-index: 100;    /*con esto hacemos que el header no apareza debido a que tambien tenia posicion fixed entonces especificamos un orden de pila haciendo que este aparezca primero*/
+  display: flex;   /*con estos 3 hacemos flexbos y lo ponemos en todo el centro*/
+  justify-content: center;
+  align-items: center;
+}
+
 .lds-grid {
     display: inline-block;
     position: relative;
@@ -242,7 +259,7 @@ img{
     object-fit: cover;  /*se especifica como la imagen debe modificar su tamaño para llenar su contenedor en este caso cover rehace su tamaño y mantiene su aspecto*/
   }
 
-  .textos-team{  /*textos de las cartas*/
+  .texto-team{  /*textos de las cartas*/
     height: 20%;  /*el alto es el 20% con respecto a su padre osea conten-card 400px */
     width: 100%;
     padding: var(--espacios) 0; /*puede tener 4 valores los cuales son, alto,derecho,fondo y izquierdo*/
@@ -259,6 +276,12 @@ img{
     justify-content: space-between;  /*damos espacios entre los elementos porque estan en el mismo eje*/
     margin: auto;
     flex-wrap: wrap; /*se autoajusta si agrando la pantalla*/
+  }
+
+  .caja-servicios{
+    width: 30%;
+    margin: auto;
+    text-align: center;
   }
 
   .caja-servicios>h4{  /*todos los h4 cuyo padre es caja-servicios los modificamos de la siguiente manera*/
@@ -301,7 +324,7 @@ img{
     justify-content: space-around;
   }
 
-  .galeria-work .cont-work{/*los elementos con la clase cont-work osea cada imagen*/
+  .cont-work{/*los elementos con la clase cont-work osea cada imagen*/
     width: 31%; /*el ancho perfecto para que me quepan de a 3 cont-work*/
     box-shadow:  0 0 6px 0 rgba(0,0,0,.5); /*se pone una sombra alrededor para dar la sensacion de estar metido en una caja*/
     overflow: hidden;
@@ -366,9 +389,10 @@ img{
     .nav2{
       color: #fff; /*color del texto*/
     }
-
+  
     .icono{
       display: block;  /*muestra el elemento como un bloque en este caso mostramos el icono de navegacion tipico de celulares*/
+      cursor: pointer;
     }
 
     .enlaces{
@@ -378,10 +402,57 @@ img{
       left: 0;           /*lo ponemos todo a la izquierda*/
       height: 100%;     /*hacemos que ocupe toda la pantalla*/
       transition: 1s;
-      
+      width: 0;      /*le ponemos de ancho 0 para que no se vea en principio*/
+      overflow: hidden;  /*para que cuando sobrepase sus limites no se vea debido a lo de arriba*/
     }
+
+  .enlaces a{ /*los links de tipo los organizamos uno debajo del otro en el responsive*/
+    display: block; /*con estos dos ponemos uno debajo del otro*/
+    width: 100%;    /*con estos dos ponemos uno debajo del otro ya que con este hacemos que ocupe todo el ancho de su padre*/
+    height: 50px;
+    padding: 20px;
+    text-align: center;
+    background: #34495e;  /*fondo de la parte de los elementos de tipo a*/
+    color: #fff;         
   }
 
+  .textos>h1{font-size: 70px;}    /*reducimos el tamaño de los textos para cuando la pantalla sea menor a 700px*/
+  .textos>h2{font-size: 35px;}
+
+  .content-card{         /*reducimos las tarjetas y quedan de a 2 en la horizontal*/
+    width: 48%;
+    margin-bottom: var(--margenes);   /*para que no queden muy pegadas*/
+  }
+
+  :root{
+    --margenes: 30px;
+  }
+}
+  @media screen and (max-width: 500px){
+    :root{
+      --espacios-contenido: 25px;
+    }
+    .content-card{
+      width: 90%;
+    }
+
+    .caja-servicios{
+      width: 90%;
+      margin-bottom: var(--margenes);
+    }
+
+    .cont-work{
+      width: 85%;
+    }
+
+    .marca-logo{
+      width: 80%;
+    }
+
+    .iconos{
+      margin: auto;  /*por seguridad*/
+    }
+  }
 
 
 
